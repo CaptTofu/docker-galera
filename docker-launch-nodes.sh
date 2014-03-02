@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #allow runtime override without need for getopt
-[[ -z "$1" ]] && IMAGE=capttofu/unbuntu_ssh || IMAGE=$1
+[[ -z "$1" ]] && IMAGE=unbuntu:13.04 || IMAGE=$1
 
 for node in 1 2 3; 
 do
