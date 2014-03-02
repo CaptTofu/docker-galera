@@ -1,4 +1,4 @@
 #!/bin/bash
 
-docker kill pxc1 pxc2 pxc3
-docker rm pxc1 pxc2 pxc3
+docker kill galera_node1 galera_node2 galera_node3
+docker rm galera_node1 galera_node2 galera_node3

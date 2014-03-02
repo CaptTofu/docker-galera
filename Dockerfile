@@ -2,7 +2,7 @@
 #
 # VERSION    0.0.1
 #
-FROM ubuntu:13.04 
+FROM ubuntu:13.04
 MAINTAINER Patrick aka CaptTofu Galbraith , patg@patg.net
 
 # Update distribution
