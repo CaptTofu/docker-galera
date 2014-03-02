@@ -1,8 +1,9 @@
-# ubuntu_ssh Dockerfile
+# ubuntu_ssh
 #
 # VERSION    0.0.1
-#
-FROM ubuntu:13.04
+
+#use the ubuntu 13.04 base image
+FROM ubuntu:13.04 
 MAINTAINER Patrick aka CaptTofu Galbraith , patg@patg.net
 
 # Update distribution
@@ -19,8 +20,10 @@ RUN chmod 700 /root/.ssh
 # upstart and sshd don't play well on docker
 Add start_services.sh /usr/local/sbin/start_services.sh
 
-ADD docker.key.pub /root/.ssh/authorized_keys
+ADD docker-galera-insecure-key.pub /root/.ssh/authorized_keys
 RUN chown -R root:root /root/.ssh
+RUN chmod 0700 /root/.ssh
+RUN chmod 0600 /root/.ssh/authorized_keys
 
 # Fix upstart (at least for mysqld) 
 RUN dpkg-divert --local --rename --add /sbin/initctl
