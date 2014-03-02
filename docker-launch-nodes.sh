@@ -12,7 +12,7 @@ echo [galera_cluster] > hosts
 for node in 1 2 3;
 do
   NODE_IP=`docker inspect galera_node${node}|grep -i ipadd| awk '{print $2}'| sed -e 's/[",]//g'`
-  echo "pxc${node} ansible_ssh_host=${NODE_IP}" >> hosts
+  echo "galera_node${node} ansible_ssh_host=${NODE_IP}" >> hosts
 done
 
 docker run -d -name=haproxy $IMAGE
