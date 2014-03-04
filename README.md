@@ -26,6 +26,11 @@ License
 
 Apache 2.0
 
+Connecting to SSH 
+-----------------
+
+ssh -i docker-galera-insecure-key 172.17.0.X -l roroot 
+
 Author Information
 ------------------
 
