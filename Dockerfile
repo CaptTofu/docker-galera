@@ -11,7 +11,7 @@ RUN apt-get update \
       && apt-get upgrade -y \
       && apt-get clean
 
-RUN apt-get install -y ssh vim
+RUN apt-get install -y ssh vim python-apt python-pycurl
 
 RUN mkdir /var/run/sshd
 RUN mkdir /root/.ssh
