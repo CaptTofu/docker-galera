@@ -9,6 +9,7 @@ Requirements
 * Docker
 * Ansible
 * ansible-galera
+* ansible-galera-haproxy
 * cluster-install
 
 Role Variables
@@ -35,3 +36,16 @@ Author Information
 ------------------
 
 Patrick "CaptTofu" Galbraith <patg@hp.com> <patg@patg.net>
+
+How do I use this?
+------------------
+
+1. If you are working in cluster-install repo:
+
+    ../docker-galera/docker-launch-nodes.sh
+
+2. At this point you now have 4 containers running:
+  - 3 percona xtradb cluster nodes
+  - 1 haproxy node
+
+3. You have a hosts file that you will specify when you run ansible. See the README in the cluster-install repo
